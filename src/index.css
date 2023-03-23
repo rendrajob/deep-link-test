@@ -19,7 +19,7 @@ $white: #ffffff;
 $your-pink: #84d6b4;
 
 body {
-    font-size: 10px; // change value to scale
+    font-size: 10px;
     font-family: Roboto, sans-serif;
     background-color: $salmon;
     
@@ -93,8 +93,6 @@ body {
     padding: 0.625em;
     box-sizing: border-box;
     box-shadow: 0 0.125em 0.3125em rgba($black, 0.3);
-
-    // position form inputs
     display: flex;
     justify-content: center;
 }
@@ -162,7 +160,6 @@ body {
     height: 100%;
     width: auto;
     
-    // accepts click events
     &::before {
         content: '';
         position: absolute;
