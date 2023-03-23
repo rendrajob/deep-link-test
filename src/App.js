@@ -15,7 +15,7 @@ function App() {
         <input class="c-checkbox" type="checkbox" id="checkbox" />
         <div class="c-formContainer">
           <form class="c-form" onSubmit={handleSubmit}>
-            <input class="c-form__input" placeholder="Enter url" type="text" required />
+            <input value={url} onChange={(e) => setUrl(e.target.value)} class="c-form__input" placeholder="Enter url" type="text" required />
             <label class="c-form__buttonLabel" for="checkbox">
               <button disabled={!!!url} class="c-form__button" type="button">Send</button>
             </label>
