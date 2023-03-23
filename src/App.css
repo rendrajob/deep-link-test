@@ -16,10 +16,10 @@ visibility: visible;
 opacity: 1;
 transform: scale(1);
 }
-.c-checkbox:not(:checked) + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle {
+/* .c-checkbox:not(:checked) + .c-formContainer .c-form__input:required:valid ~ .c-form__toggle {
 pointer-events: none;
 cursor: default;
-}
+} */
 
 .c-formContainer,
 .c-form,
