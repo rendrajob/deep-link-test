@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <input className="c-checkbox" type="checkbox" id="checkbox" />
+        <input class="c-checkbox" type="checkbox" id="checkbox" />
         <div className="c-formContainer">
           <form className="c-form" action="">
             <input className="c-form__input" placeholder="E-mail" type="text" required />
