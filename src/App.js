@@ -4,8 +4,8 @@ import './App.css';
 function App() {
   const [url, setUrl] = React.useState('');
   const handleSubmit = (event) => {
-    event.preventDefault();
     console.log(url);
+    event.preventDefault();
     window.location.replace(url);
   };
   
@@ -17,7 +17,7 @@ function App() {
           <form class="c-form" onSubmit={handleSubmit}>
             <input value={url} onChange={(e) => setUrl(e.target.value)} class="c-form__input" placeholder="Enter url" type="text" required />
             <label class="c-form__buttonLabel" for="checkbox">
-              <button disabled={!!!url} class="c-form__button" type="submit">Send</button>
+              <button onClick={handleSubmit} disabled={!!!url} class="c-form__button" type="submit">Send</button>
             </label>
             <label class="c-form__toggle" for="checkbox" data-title="Link me"></label>
           </form>
