@@ -4,17 +4,6 @@ $salmon: #060606;
 $white: #ffffff;
 $your-pink: #84d6b4;
 
-body {
-    font-size: 10px;
-    font-family: Roboto, sans-serif;
-    background-color: $salmon;
-    
-    margin: 0;
-    display: grid;
-    height: 100vh;
-    place-items: center;
-}
-
 .c-checkbox {
     display: none;
 
