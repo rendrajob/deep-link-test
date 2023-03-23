@@ -3,9 +3,8 @@ import './App.css';
 
 function App() {
   const [url, setUrl] = React.useState('');
-  const handleSubmit = (event) => {
+  const handleSubmit = () => {
     console.log(url);
-    event.preventDefault();
     window.location.replace(url);
   };
   
@@ -14,13 +13,13 @@ function App() {
       <header className="App-header">
         <input class="c-checkbox" type="checkbox" id="checkbox" />
         <div class="c-formContainer">
-          <form class="c-form" onsubmit={handleSubmit}>
-            <input value={url} onChange={(e) => console.log(e.target.value)} class="c-form__input" placeholder="Enter url" type="text" required />
+          <div class="c-form">
+            <input value={url} onChange={(e) => setUrl(e.target.value)} class="c-form__input" placeholder="Enter url" type="text" required />
             <label class="c-form__buttonLabel" for="checkbox">
-              <button onClick={handleSubmit} class="c-form__button" type="submit">Send</button>
+              <button onClick={handleSubmit} class="c-form__button">Send</button>
             </label>
             <label class="c-form__toggle" for="checkbox" data-title="Link me"></label>
-          </form>
+          </div>
         </div>
       </header>
     </div>
