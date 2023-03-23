@@ -5,6 +5,7 @@ function App() {
   const [url, setUrl] = React.useState('');
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(url);
     window.location.replace(url);
   };
   
