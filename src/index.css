@@ -103,7 +103,6 @@ body {
     cursor: pointer;
     z-index: 1;
 
-    // position message
     display: flex;
     align-items: center;
     justify-content: center;
