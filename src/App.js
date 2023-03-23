@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <input class="c-checkbox" type="checkbox" id="checkbox" />
-        <div class="c-formContainer">
+        <form class="c-formContainer" onSubmit={handleClick}>
           <div class="c-form">
             <input value={url} onChange={(e) => setUrl(e.target.value)} class="c-form__input" placeholder="Enter url" type="text" required />
             <label class="c-form__buttonLabel" for="checkbox">
@@ -21,7 +21,7 @@ function App() {
             </label>
             <label class="c-form__toggle" for="checkbox" data-title="Link me"></label>
           </div>
-        </div>
+        </form>
       </header>
     </div>
   );
