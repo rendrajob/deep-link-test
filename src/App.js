@@ -17,7 +17,7 @@ function App() {
           <form class="c-form" onSubmit={handleSubmit}>
             <input value={url} onChange={(e) => setUrl(e.target.value)} class="c-form__input" placeholder="Enter url" type="text" required />
             <label class="c-form__buttonLabel" for="checkbox">
-              <button onClick={handleSubmit} disabled={!!!url} class="c-form__button" type="submit">Send</button>
+              <input class="c-form__button" type="submit" value="Send" />
             </label>
             <label class="c-form__toggle" for="checkbox" data-title="Link me"></label>
           </form>
