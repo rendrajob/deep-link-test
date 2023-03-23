@@ -3,10 +3,10 @@ import './App.css';
 
 function App() {
   const [url, setUrl] = React.useState('');
-  const handleSubmit = () => {
-    console.log(url);
-    window.location.replace(url);
-  };
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log('The link was clicked :: ', url);
+  }
   
   return (
     <div className="App">
@@ -16,7 +16,7 @@ function App() {
           <div class="c-form">
             <input value={url} onChange={(e) => setUrl(e.target.value)} class="c-form__input" placeholder="Enter url" type="text" required />
             <label class="c-form__buttonLabel" for="checkbox">
-              <button onClick={handleSubmit} class="c-form__button">Send</button>
+              <button onClick={handleClick} class="c-form__button">Send</button>
             </label>
             <label class="c-form__toggle" for="checkbox" data-title="Link me"></label>
           </div>
