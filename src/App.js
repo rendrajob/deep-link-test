@@ -31,7 +31,7 @@ function App() {
           </div>
         </form>
         {cook.map((cookie) => (
-          <div key={cookie.key}>
+          <div class="f-white" key={cookie.key}>
               <p>Name: {cookie.key}</p>
               <p>Value: {cookie.value}</p>
           </div>
