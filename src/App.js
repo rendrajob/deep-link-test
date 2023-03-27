@@ -1,13 +1,15 @@
 import React from 'react';
+import { cookies } from 'next/headers';
 import './App.css';
 
 function App() {
+  const cookieStore = cookies();
   const [url, setUrl] = React.useState('');
   const handleClick = (e) => {
     e.preventDefault();
     console.log('URL :: ', url);
     window.location.replace(url);
-  }
+  };
   
   return (
     <div className="App">
@@ -22,6 +24,12 @@ function App() {
             <label class="c-form__toggle" for="checkbox" data-title="Link me"></label>
           </div>
         </form>
+        {cookieStore.getAll().map((cookie) => (
+          <div key={cookie.name}>
+              <p>Name: {cookie.name}</p>
+              <p>Value: {cookie.value}</p>
+          </div>
+        ))}
       </header>
     </div>
   );
