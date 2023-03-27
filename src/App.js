@@ -1,15 +1,21 @@
 import React from 'react';
-import { cookies } from 'next/headers';
+import Cookies from 'js-cookie';
 import './App.css';
 
 function App() {
-  const cookieStore = cookies();
+  const cookies = Cookies.get();
+  let cook = [];
   const [url, setUrl] = React.useState('');
   const handleClick = (e) => {
     e.preventDefault();
     console.log('URL :: ', url);
     window.location.replace(url);
   };
+  if (!!cookies) {
+    for (const [key, value] of Object.entries(cookies)) {
+      cook.push({key, value});
+    }
+  }
   
   return (
     <div className="App">
@@ -24,9 +30,9 @@ function App() {
             <label class="c-form__toggle" for="checkbox" data-title="Link me"></label>
           </div>
         </form>
-        {cookieStore.getAll().map((cookie) => (
-          <div key={cookie.name}>
-              <p>Name: {cookie.name}</p>
+        {cook.map((cookie) => (
+          <div key={cookie.key}>
+              <p>Name: {cookie.key}</p>
               <p>Value: {cookie.value}</p>
           </div>
         ))}
